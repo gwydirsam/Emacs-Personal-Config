@@ -1,0 +1,6 @@
+[submodule "vendor/prelude-modules"]
+	path = vendor/prelude-modules
+	url = https://github.com/bbatsov/prelude-modules.git
+[submodule "vendor/evil-surround"]
+	path = vendor/evil-surround
+	url = https://github.com/timcharper/evil-surround.git

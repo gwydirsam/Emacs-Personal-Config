@@ -1,11 +1,6 @@
 ;;emacs daemon
 (server-start)
 
-;;path from zshrc
-(if (not (getenv "TERM_PROGRAM"))
-    (setenv "PATH"
-            (shell-command-to-string "source $HOME/.zshrc && printf $PATH")))
-
 ;;load personal/vendor and it's subdirs
 (let ((default-directory "~/.emacs.d/personal/vendor/"))
   (normal-top-level-add-subdirs-to-load-path))
@@ -177,8 +172,16 @@
 ;;Prelude-mode
 (prelude-global-mode)
 
-;;Disable Scroll Bars
-(scroll-bar-mode -1)
+;;Only On OS X
+(when (eq system-type 'darwin)
+    ;;path from zshrc
+    (if (not (getenv "TERM_PROGRAM"))
+        (setenv "PATH"
+                (shell-command-to-string "source $HOME/.zshrc && printf $PATH")))
+
+    ;;Disable Scroll Bars
+    (scroll-bar-mode -1)
+  )
 
 ;;Disable fringe-mode
 (set-fringe-mode 0)

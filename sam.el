@@ -9,10 +9,15 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/solarized-emacs")
 
 ;;;requires
-(require 'org-install)
+(require 'org)
 
 (require 'org-crypt)
 (require 'epa-file)
+
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+(require 'stripe-buffer)
 
 (require 'dired-x)
 
@@ -79,11 +84,6 @@
 ;;Don't like the way this works
 ;;(setq org-startup-indented t)
 
-;; Enable encryption
-(setq org-mobile-use-encryption t)
-;; Set a password
-(setq org-mobile-encryption-password "RedBook4096")
-
 (org-crypt-use-before-save-magic)
 (setq org-tags-exclude-from-inheritance (quote ("crypt")))
 (setq org-crypt-key "0AD14C01")
@@ -135,13 +135,8 @@
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
 
 (setq org-agenda-files (list "~/Notes/inbox.org"
-                             "~/Notes/buy.org"
                              "~/Notes/general.org"
-                             "~/Notes/habits.org"
-                             "~/Notes/money.org"
-                             "~/Notes/school.org"
-                             "~/Notes/houston.org"
-                             "~/Notes/collegestation.org"))
+                             "~/Notes/school.org"))
 ;; No properties drawer
 (setq org-mobile-force-id-on-agenda-items nil)
 
@@ -158,10 +153,6 @@
 ;;Evil
 (evil-mode 1)
 (setq evil-emacs-state-cursor '("#4271ae" box))
-
-;; org agenda -- leave in emacs mode but add j & k
-;(define-key org-agenda-mode-map "j" 'evil-next-line)
-;(define-key org-agenda-mode-map "k" 'evil-previous-line)
 
 (evil-set-initial-state org-agenda-mode-map 'motion)
 (evil-set-initial-state dired-mode-map 'motion)
@@ -205,8 +196,7 @@
   "My coding hooks"
   (flyspell-prog-mode)
   (prelude-local-comment-auto-fill)
-  (prelude-turn-off-whitespace)
-  (prelude-turn-on-abbrev)
+  (whitespace-turn-off)
   (prelude-add-watchwords)
   (linum-mode)
   (visual-line-mode 0))
@@ -234,14 +224,45 @@
 (add-hook 'sh-mode-hook (lambda () (sam-prog-mode-defaults)) t)
 
 (setq org-agenda-custom-commands
-      '(("c" "Calendar" agenda ""
-         ((org-agenda-ndays 7)                          ;; [1]
-          (org-agenda-start-on-weekday 0)               ;; [2]
-          (org-agenda-time-grid t)
-          (org-agenda-repeating-timestamp-show-all t)   ;; [3]
-          (org-agenda-entry-types '(:timestamp :sexp))))  ;; [4]
-        ;; other commands go here
+      '(
+        ("t" "Today" agenda ""
+         ((org-agenda-overriding-header "Today")
+          (org-agenda-start-on-weekday nil)
+          (org-agenda-span (quote day))
+          (org-agenda-show-all-dates nil)
+          (org-deadline-warning-days 31)
+          (org-agenda-repeating-timestamp-show-all t) ;; ensures that repeating events appear on all relevant dates
+            ))
+        ("w" "Week" agenda ""
+         ((org-agenda-overriding-header "Week")
+          (org-agenda-start-on-weekday nil)
+          (org-agenda-span (quote week))
+          (org-agenda-show-all-dates nil)
+          (org-deadline-warning-days 31)
+          (org-agenda-repeating-timestamp-show-all t) ;; ensures that repeating events appear on all relevant dates
+            ))
+        ("m" "Month" agenda ""
+         ((org-agenda-overriding-header "Month")
+          (org-agenda-start-on-weekday nil)
+          (org-agenda-span (quote month))
+          (org-agenda-show-all-dates nil)
+          (org-deadline-warning-days 31)
+          (org-agenda-repeating-timestamp-show-all t) ;; ensures that repeating events appear on all relevant dates
+          ))
+        ;; limits agenda view to timestamped items
+        ("G" "Geektool agenda" agenda ""
+         ((org-agenda-ndays 9)
+          (org-agenda-show-all-dates t)
+          (org-agenda-start-on-weekday nil)
+          (org-deadline-warning-days 31)
+          (org-agenda-overriding-header "")
+          (org-agenda-compact-blocks t)
+          (org-agenda-with-colors t)
+          (org-agenda-repeating-timestamp-show-all t) ;; ensures that repeating events appear on all relevant dates
+          (org-agenda-prefix-format "%-2T%-12:c%?-12t% s"))) ;;"%-2T%?-12t% s"
         ))
+
+(setq org-mobile-agendas 'custom)
 
 ;;hide hidden files in dired
 (setq dired-omit-files "^\\...+$")

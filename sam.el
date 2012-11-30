@@ -6,7 +6,8 @@
   (normal-top-level-add-subdirs-to-load-path))
 
 ;;load themes
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/solarized-emacs")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/base16")
+(load-theme 'base16-custom t)
 
 ;;;requires
 (require 'org)
@@ -295,6 +296,3 @@
 (setq compilation-ask-about-save nil)
 ;;; Don't save *anything*
 (setq compilation-save-buffers-predicate '(lambda () nil))
-
-;;; Full Screen Icon on Toolbar
-(menu-bar-mode)

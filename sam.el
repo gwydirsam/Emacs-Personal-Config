@@ -17,8 +17,6 @@
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
-(require 'stripe-buffer)
-
 (require 'dired-x)
 
 (require 'paredit)
@@ -30,21 +28,23 @@
 (require 'surround)
 
 ;;prelude-modules
-(require 'prelude-programming)
 (require 'prelude-c)
-(require 'prelude-css)
 (require 'prelude-clojure)
 (require 'prelude-coffee)
 (require 'prelude-common-lisp)
+(require 'prelude-css)
 (require 'prelude-emacs-lisp)
+(require 'prelude-programming)
 (require 'prelude-haskell)
-;(require 'prelude-erlang)
 (require 'prelude-js)
+(require 'prelude-erlang)
 ;(require 'prelude-latex)
+(require 'prelude-lisp)
 (require 'prelude-org)
 (require 'prelude-perl)
 (require 'prelude-python)
 (require 'prelude-ruby)
+(require 'prelude-scala)
 (require 'prelude-scheme)
 (require 'prelude-scss)
 (require 'prelude-xml)
@@ -68,6 +68,7 @@
 
 ;;undo-tree
 (global-undo-tree-mode)
+(setq undo-tree-auto-save-history t)
 
 ;;auctex
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
@@ -203,7 +204,7 @@
 (add-hook 'prelude-prog-mode-hook 'sam-prog-mode-defaults t)
 
 ;;ruby mode uses prog-mode-defaults
-(add-hook 'prelude-ruby-mode-hook 'prelue-prog-mode-hook)
+(add-hook 'prelude-ruby-mode-hook 'sam-prog-mode-defaults t)
 
 (blink-cursor-mode t)
 ;;(global-linum-mode t)
@@ -277,18 +278,6 @@
                 (save-buffer)
                 (server-edit)))))
 
-;;transparency in fullscreen
-
-(defvar fullscreen-parameter t)
-
-(defun toggle-fullscreen ()
-  (interactive)
-  (ns-toggle-fullscreen)
-  (setq fullscreen-parameter (not fullscreen-parameter))
-  (if fullscreen-parameter
-      (modify-frame-parameters nil `((alpha . 100)))
-      (modify-frame-parameters nil `((alpha . 90)))))
-
 ;;no scroll bars
 (defun setup-frame-hook (new-frame)
   "This function will be applied to all new emacs frames."
@@ -306,3 +295,6 @@
 (setq compilation-ask-about-save nil)
 ;;; Don't save *anything*
 (setq compilation-save-buffers-predicate '(lambda () nil))
+
+;;; Full Screen Icon on Toolbar
+(menu-bar-mode)

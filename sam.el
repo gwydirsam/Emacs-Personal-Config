@@ -28,6 +28,8 @@
 (require 'evil-numbers)
 (require 'surround)
 
+;(require 'powerline)
+
 ;;prelude-modules
 (require 'prelude-c)
 (require 'prelude-clojure)

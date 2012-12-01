@@ -68,7 +68,6 @@
 
 ;;undo-tree
 (global-undo-tree-mode)
-(setq undo-tree-auto-save-history t)
 
 ;;auctex
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp")

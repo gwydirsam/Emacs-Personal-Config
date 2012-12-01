@@ -28,7 +28,7 @@
 (require 'evil-numbers)
 (require 'surround)
 
-;(require 'powerline)
+(require 'powerline)
 
 ;;prelude-modules
 (require 'prelude-c)

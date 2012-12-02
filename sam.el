@@ -22,9 +22,8 @@
 
 (require 'paredit)
 
-(require 'surround)
-
 (require 'undo-tree)
+(require 'surround)
 
 ;;prelude-modules
 (require 'prelude-c)
@@ -293,3 +292,6 @@
 (setq compilation-ask-about-save nil)
 ;;; Don't save *anything*
 (setq compilation-save-buffers-predicate '(lambda () nil))
+
+
+;;

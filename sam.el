@@ -22,13 +22,9 @@
 
 (require 'paredit)
 
-(require 'undo-tree)
-(require 'evil)
-(require 'evil-leader)
-(require 'evil-numbers)
 (require 'surround)
 
-(require 'powerline)
+(require 'undo-tree)
 
 ;;prelude-modules
 (require 'prelude-c)

@@ -28,8 +28,6 @@
 (require 'evil-numbers)
 (require 'surround)
 
-(require 'powerline)
-
 ;;prelude-modules
 (require 'prelude-c)
 (require 'prelude-clojure)
@@ -297,3 +295,6 @@
 (setq compilation-ask-about-save nil)
 ;;; Don't save *anything*
 (setq compilation-save-buffers-predicate '(lambda () nil))
+
+
+;;

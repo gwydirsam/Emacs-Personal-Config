@@ -1,15 +1,6 @@
-;;load personal/vendor and it's subdirs
-let ((default-directory "~/.emacs.d/personal/vendor/"))
-  (normal-top-level-add-subdirs-to-load-path))
-
+;;; Org
 (require 'org)
-(require 'org-crypt)
 (require 'prelude-org)
-
-(org-crypt-use-before-save-magic)
-(setq org-tags-exclude-from-inheritance (quote ("crypt")))
-(setq org-crypt-key "0AD14C01")
-
 ;org-agenda opens in current window
 (setq org-agenda-window-setup 'current-window)
 
@@ -45,6 +36,15 @@ let ((default-directory "~/.emacs.d/personal/vendor/"))
 (org-clock-persistence-insinuate)
 ;;time logging
 (setq org-log-done 'time)
+
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+(require 'org-crypt)
+(require 'epa-file)
+(org-crypt-use-before-save-magic)
+(setq org-tags-exclude-from-inheritance (quote ("crypt")))
+(setq org-crypt-key "0AD14C01")
 
 (setq org-agenda-custom-commands
       '(

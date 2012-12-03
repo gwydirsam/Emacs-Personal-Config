@@ -25,7 +25,7 @@
  '(iswitchb-mode t)
  '(linum-format " %3d ")
  '(markdown-command "multimarkdown")
- '(menu-bar-mode t)
+ '(menu-bar-mode nil)
  '(midnight-mode t nil (midnight))
  '(ns-pop-up-frames nil)
  '(org-agenda-current-time-string "now - - - - - - - - - - - - -")

@@ -8,9 +8,11 @@
 
 ;;; Gui Config
 
-;; speedbar
-(require 'sr-speedbar)
-(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+;; Doesn't work with evil
+;;;; speedbar
+;;(require 'sr-speedbar)
+;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+;;(setq speedbar-use-images nil)
 
 ;;no scroll bars
 (defun setup-frame-hook (new-frame)
@@ -33,6 +35,9 @@
 
 ;;line-spacing
 (setq line-spacing 3)
+
+;;Disable Menu-bar-mode
+(setq menu-bar-mode nil)
 
 ;;selection modification
 ;; make the current 'selection' visible

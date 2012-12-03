@@ -15,8 +15,8 @@
 (global-surround-mode 1)
 
 (require 'evil-numbers)
-(global-define-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
-(global-define-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
+(global-set-key (kbd "C-c +") 'evil-numbers/inc-at-pt)
+(global-set-key (kbd "C-c -") 'evil-numbers/dec-at-pt)
 
 (require 'paredit)
 (require 'evil-paredit)

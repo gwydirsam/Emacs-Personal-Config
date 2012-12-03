@@ -1,5 +1,5 @@
 ;;load personal/vendor and it's subdirs
-let ((default-directory "~/.emacs.d/personal/vendor/"))
+(let ((default-directory "~/.emacs.d/personal/vendor/"))
   (normal-top-level-add-subdirs-to-load-path))
 
 (require 'org)

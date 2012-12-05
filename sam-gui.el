@@ -6,13 +6,18 @@
 ;; Set theme
 (load-theme 'base16-custom t)
 
+;; Set Font
+(set-face-attribute 'default nil :family "Consolas" :height 220)
+;(set-fontset-font "fontset-default" 'unicode "Monaco")
+
 ;;; Gui Config
 
-;; Doesn't work with evil
-;;;; speedbar
-;;(require 'sr-speedbar)
-;;(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
-;;(setq speedbar-use-images nil)
+;; speedbar
+(require 'sr-speedbar)
+(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+(setq speedbar-use-images nil)
+
+(powerline-center-theme)
 
 ;;no scroll bars
 (defun setup-frame-hook (new-frame)

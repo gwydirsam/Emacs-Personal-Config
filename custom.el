@@ -27,6 +27,8 @@
  '(markdown-command "multimarkdown")
  '(menu-bar-mode nil)
  '(midnight-mode t nil (midnight))
+ '(minimap-always-recenter nil)
+ '(minimap-recenter-type (quote relative))
  '(ns-pop-up-frames nil)
  '(org-agenda-current-time-string "now - - - - - - - - - - - - -")
  '(org-agenda-files (quote ("~/Notes/inbox.org" "~/Notes/general.org" "~/Notes/school.org")))

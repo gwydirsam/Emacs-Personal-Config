@@ -17,6 +17,7 @@
 (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 (setq speedbar-use-images nil)
 
+;; powerline
 (powerline-center-theme)
 
 ;;no scroll bars
@@ -63,3 +64,6 @@
           (lambda () (run-at-time 3 nil
                                   (lambda () (delete-windows-on "*Completions*"))
                                   (lambda () (delete-windows-on "*Ido Completions*")))))
+
+;; minimap
+(require 'minimap)

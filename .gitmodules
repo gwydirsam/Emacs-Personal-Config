@@ -4,3 +4,6 @@
 [submodule "vendor/evil-surround"]
 	path = vendor/evil-surround
 	url = https://github.com/timcharper/evil-surround.git
+[submodule "vendor/minimap"]
+	path = vendor/minimap
+	url = git://randomsample.de/minimap.git

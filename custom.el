@@ -25,7 +25,6 @@
  '(iswitchb-mode t)
  '(linum-format " %3d ")
  '(markdown-command "multimarkdown")
- '(menu-bar-mode nil)
  '(midnight-mode t nil (midnight))
  '(minimap-always-recenter nil)
  '(minimap-recenter-type (quote relative))

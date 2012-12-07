@@ -1,7 +1,17 @@
-;;; OS X
-;; Set Path
+;;; sam-osx.el --- OS X Specific Config
+
+;;; Commentary:
+
+;;; Code:
+
 (when (eq system-type 'darwin)
-  ;;path from zshrc
+
+  ;; Set Path
   (if (not (getenv "TERM_PROGRAM"))
       (setenv "PATH"
-              (shell-command-to-string "source $HOME/.zshrc && printf $PATH"))))
+              (shell-command-to-string "source $HOME/.zshrc && printf $PATH")))
+)
+
+(provide 'sam-osx)
+
+;;; sam-osx.el ends here

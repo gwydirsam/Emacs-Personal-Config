@@ -1,4 +1,9 @@
-;;; GPG
+;;; sam-gpg.el --- GPG Config
+
+;;; Commentary:
+;;
+
+;;; Code:
 
 ;;encryption
 (setq epg-gpg-program "gpg2")
@@ -7,3 +12,7 @@
 ;; use keys
 (setq epa-file-select-keys nil)
 (setq epa-file-inhibit-auto-save t)
+
+(provide 'sam-gpg)
+
+;;; sam-gpg.el ends here

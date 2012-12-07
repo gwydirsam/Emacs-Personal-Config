@@ -1,6 +1,13 @@
+;;; sam-org.el --- Org-mode Config
+
+;;; Commentary:
+
+;;; Code:
+
 ;;; Org
 (require 'org)
 (require 'prelude-org)
+
 ;org-agenda opens in current window
 (setq org-agenda-window-setup 'current-window)
 
@@ -86,3 +93,7 @@
         ))
 
 (setq org-mobile-agendas 'custom)
+
+(provide 'sam-org)
+
+;;; sam-org.el ends here

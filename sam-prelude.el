@@ -1,4 +1,7 @@
-;;; Prelude Settings
+;;; sam-prelude.el --- Emacs Prelude Config
+
+;;; Commentary:
+;;
 
 ;;prelude-modules
 (require 'prelude-c)
@@ -24,6 +27,8 @@
 (require 'prelude-mediawiki)
 
 ;;Prelude-mode
+;;; Code:
+
 (prelude-global-mode)
 
 ;;Prog Mode Hooks
@@ -39,3 +44,7 @@
 
 ;;ruby mode uses prog-mode-defaults
 (add-hook 'prelude-ruby-mode-hook 'sam-prog-mode-defaults t)
+
+(provide 'sam-prelude)
+
+;;; sam-prelude.el ends here

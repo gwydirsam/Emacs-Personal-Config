@@ -1,3 +1,9 @@
+;;; mobileorg.el --- Mobile Org Specific Emacs Config
+
+;;; Commentary:
+
+;;; Code:
+
 ;;load personal/vendor and it's subdirs
 (let ((default-directory "~/.emacs.d/personal/vendor/"))
   (normal-top-level-add-subdirs-to-load-path))
@@ -86,3 +92,5 @@
         ))
 
 (setq org-mobile-agendas 'custom)
+
+;;; mobileorg.el ends here

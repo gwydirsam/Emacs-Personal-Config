@@ -1,3 +1,9 @@
+;;; geektool.el --- Geektool Specific Emacs File
+
+;;; Commentary:
+
+;;; Code:
+
 (setq org-agenda-files (list "~/Notes/inbox.org"
                              "~/Notes/general.org"
                              "~/Notes/school.org"))
@@ -47,3 +53,5 @@
 
 (setq org-agenda-time-grid (quote ((daily today require-timed remove-match) "" (0900 1200 1500 1800 2100))))
 (setq org-agenda-time-leading-zero t)
+
+;;; geektool.el ends here

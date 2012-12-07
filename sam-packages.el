@@ -1,6 +1,14 @@
-;;; Packages
+;;; sam-packages.el --- Pulls packages off MELPA if not installed
+
+;;; Commentary:
+;;
+
+;;; Code:
+
 (require 'cl)
 (require 'package)
+
+
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
@@ -116,8 +124,11 @@
     (message "%s" " done.")
     (dolist (p packages)
       (unless (package-installed-p p)
-        (package-install p)))))
+        (package-install p))))
+"Install Missing Packages")
 
-(install-packages)
+(Install-packages)
 
 (provide 'sam-packages)
+
+;;; sam-packages.el ends here

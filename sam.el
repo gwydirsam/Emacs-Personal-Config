@@ -1,5 +1,11 @@
+;;; sam.el --- General Config
+
+;;; Commentary:
+
+;;; Code:
+
 ;;emacs daemon
-(server-start)
+(unless (server-running-p) (server-start))
 
 ;;load personal/vendor and it's subdirs
 (let ((default-directory "~/.emacs.d/personal/vendor/"))
@@ -11,5 +17,6 @@
 ;;; Don't save *anything*
 (setq compilation-save-buffers-predicate '(lambda () nil))
 
-;; fix M-a M-e
-(setq sentence-end-double-space nil)
+(provide 'sam)
+
+;;; sam.el ends here

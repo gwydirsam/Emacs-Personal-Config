@@ -1,3 +1,10 @@
+;;; sam-gui.el --- Emacs Gui Config
+
+;;; Commentary:
+;;
+
+;;; Code:
+
 ;;; Themes
 
 ;; Load theme path
@@ -12,13 +19,8 @@
 
 ;;; Gui Config
 
-;; speedbar
-(require 'sr-speedbar)
-(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
-(setq speedbar-use-images nil)
-
-;; powerline
-(powerline-center-theme)
+;; Less flickery display
+(setq redisplay-dont-pause t)
 
 ;;no scroll bars
 (defun setup-frame-hook (new-frame)
@@ -65,5 +67,6 @@
                                   (lambda () (delete-windows-on "*Completions*"))
                                   (lambda () (delete-windows-on "*Ido Completions*")))))
 
-;; minimap
-(require 'minimap)
+(provide 'sam-gui)
+
+;;; sam-gui.el ends here

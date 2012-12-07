@@ -15,7 +15,10 @@
  '(delete-by-moving-to-trash t)
  '(desktop-save-mode nil)
  '(diary-show-holidays-flag nil)
+ '(display-time-24hr-format t)
+ '(display-time-mode t)
  '(doc-view-continuous t)
+ '(ebnf-non-terminal-border-width 0.0)
  '(evil-esc-delay 0.0)
  '(fci-rule-color "#383838")
  '(fringe-mode 0 nil (fringe))
@@ -61,4 +64,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-hide ((t (:foreground "background")))))
+ '(border ((t (:background "#303030"))))
+ '(org-hide ((t (:foreground "background"))))
+ '(speedbar-button-face ((t (:foreground "#90a959" :height 180))))
+ '(speedbar-directory-face ((t (:foreground "#6a9fb5" :height 180))))
+ '(speedbar-file-face ((t (:foreground "#e0e0e0" :height 180))))
+ '(speedbar-highlight-face ((t (:foreground "#75b5aa" :height 180))))
+ '(speedbar-selected-face ((t (:foreground "#ac4142" :underline t :height 180))))
+ '(speedbar-separator-face ((t (:background "blue" :foreground "white" :height 180)))))

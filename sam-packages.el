@@ -67,6 +67,7 @@
     magit
     magit-push-remote
     magithub
+    minimap
     markdown-mode
     mediawiki
     melpa
@@ -94,6 +95,7 @@
     ruby-tools
     rvm
     s
+    surround
     sass-mode
     scala-mode
     scss-mode
@@ -127,7 +129,7 @@
         (package-install p))))
 "Install Missing Packages")
 
-(Install-packages)
+(install-packages)
 
 (provide 'sam-packages)
 

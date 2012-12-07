@@ -1,4 +1,19 @@
-;;; Auto Modes
+;;; sam-editor.el --- General Editing Config
+
+;;; Commentary:
+;;
+
+;; Use Smex for recent M-x commands a la ido.
+(smex-initialize)
+
+;; Allow commands which would be disabled by default.
+(put 'ido-complete 'disabled nil)
+(put 'ido-exit-minibuffer 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)
+(put 'autopair-newline 'disabled nil)
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+(put 'narrow-to-region 'disabled nil)
 
 ;;edit mail from mutt in mail mode
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
@@ -22,3 +37,13 @@
                 (interactive)
                 (save-buffer)
                 (server-edit)))))
+
+;; Enable flymake for all files
+(add-hook 'find-file-hook 'flycheck-mode)
+
+;; fix M-a M-e
+(setq sentence-end-double-space nil)
+
+(provide 'sam-editor)
+
+;;; sam-editor.el ends here

@@ -46,8 +46,6 @@
     google-c-style
     haml-mode
     haskell-mode
-    helm
-    helm-projectile
     highlight-parentheses
     htmlize
     inf-ruby

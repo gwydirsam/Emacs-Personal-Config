@@ -29,6 +29,11 @@
 (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 (add-hook 'sh-mode-hook (lambda () (sam-prog-mode-defaults)) t)
 
+;;mark-down
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+
 ;;C-c C-c for mail-mode exit mail
 (add-hook 'mail-mode-hook
           (lambda ()
@@ -37,6 +42,7 @@
                 (interactive)
                 (save-buffer)
                 (server-edit)))))
+
 
 ;; Enable flymake for all files
 (add-hook 'find-file-hook 'flycheck-mode)

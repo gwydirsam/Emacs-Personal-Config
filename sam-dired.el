@@ -13,7 +13,10 @@
 
 ;; dired-details
 (require 'dired-details)
- (dired-details-install)
+(dired-details-install)
+
+(require 'stripe-buffer)
+(add-hook 'dired-mode-hook 'stripe-buffer-mode)
 
 (provide 'sam-dired)
 

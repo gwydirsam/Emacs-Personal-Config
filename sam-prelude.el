@@ -44,6 +44,11 @@
 
 ;;ruby mode uses prog-mode-defaults
 (add-hook 'prelude-ruby-mode-hook 'sam-prog-mode-defaults t)
+;;Turn off god damn electric-pair-mode!
+(defun sam-ruby-mode-defaults ()
+  "My Ruby Hooks"
+  (electric-pair-mode 0))
+(add-hook 'prelude-ruby-mode-hook 'sam-ruby-mode-defaults t)
 
 (provide 'sam-prelude)
 

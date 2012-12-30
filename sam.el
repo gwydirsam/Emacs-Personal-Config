@@ -17,6 +17,7 @@
 ;;; Don't save *anything*
 (setq compilation-save-buffers-predicate '(lambda () nil))
 
+
 (provide 'sam)
 
 ;;; sam.el ends here

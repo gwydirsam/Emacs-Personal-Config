@@ -8,6 +8,9 @@
 (require 'org)
 (require 'prelude-org)
 
+;; stripe tables
+(add-hook 'org-mode-hook 'org-table-stripes-enable)
+
 ;org-agenda opens in current window
 (setq org-agenda-window-setup 'current-window)
 

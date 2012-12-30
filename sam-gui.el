@@ -13,9 +13,20 @@
 ;; Set theme
 (load-theme 'base16-custom t)
 
+;; Unicode
+;; set up unicode
+(prefer-coding-system       'utf-8)
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(setq default-buffer-file-coding-system 'utf-8)
+
+(require 'unicode-fonts)
+(unicode-fonts-setup)
+
 ;; Set Font
-(set-face-attribute 'default nil :family "Consolas" :height 220)
-;(set-fontset-font "fontset-default" 'unicode "Monaco")
+(set-face-attribute 'default nil :family "Consolas for Powerline" :height 220)
+;;(set-fontset-font "fontset-default" 'unicode "Consolas for Powerline")
 
 ;;; Gui Config
 
@@ -44,8 +55,13 @@
 ;;line-spacing
 (setq line-spacing 3)
 
-;;Disable Menu-bar-mode
-(setq menu-bar-mode nil)
+;;Menu-bar-mode
+(setq menu-bar-mode t)
+
+;;Enable Tool-bar-mode
+(tool-bar-mode 1)
+;;Fixes Lion Fullscreen
+;;(setq tool-bar-lines 0)
 
 ;;selection modification
 ;; make the current 'selection' visible
@@ -66,6 +82,17 @@
           (lambda () (run-at-time 3 nil
                                   (lambda () (delete-windows-on "*Completions*"))
                                   (lambda () (delete-windows-on "*Ido Completions*")))))
+
+(defun toggle-full-screen ()
+  (interactive)
+  (ns-toggle-fullscreen)
+  (sit-for 2)
+  (tool-bar-mode +1)
+  (tool-bar-mode +1)
+  (tool-bar-mode -1)
+  (tool-bar-mode -1)
+  (set-frame-height (selected-frame) 46)
+)
 
 (provide 'sam-gui)
 

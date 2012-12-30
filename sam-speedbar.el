@@ -23,7 +23,7 @@
       speedbar-update-flag t
       sr-speedbar-width 20
       sr-speedbar-width-x 20
-      sr-speedbar-auto-refresh nil
+      sr-speedbar-auto-refresh t
       sr-speedbar-skip-other-window-p t
       sr-speedbar-right-side nil)
 
@@ -36,6 +36,9 @@
 
 ;; Highlight the current line
 (add-hook 'speedbar-mode-hook '(lambda () (hl-line-mode 1)))
+;; Stripe Speedbar
+(add-hook 'speedbar-mode-hook 'stripe-buffer-mode)
+
 
 ;; Always use the last selected window for loading files from speedbar.
 (defvar last-selected-window (selected-window))

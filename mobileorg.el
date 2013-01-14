@@ -37,7 +37,7 @@
 (setq org-mobile-directory "~/Dropbox/MobileOrg")
 
 (setq org-agenda-files (list "~/Notes/inbox.org"
-                             "~/Notes/general.org"
+                             "~/Notes/schedule.org"
                              "~/Notes/school.org"))
 ;; No properties drawer
 (setq org-mobile-force-id-on-agenda-items nil)

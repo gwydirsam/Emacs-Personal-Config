@@ -5,7 +5,7 @@
 ;;; Code:
 
 (setq org-agenda-files (list "~/Notes/inbox.org"
-                             "~/Notes/general.org"
+                             "~/Notes/schedule.org"
                              "~/Notes/school.org"))
 (setq org-agenda-current-time-string "now - - - - - - - - - - - - -")
 

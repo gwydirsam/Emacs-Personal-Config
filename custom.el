@@ -4,8 +4,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ampc-default-server (quote ("totoro.local" . 6600)))
- '(ansi-color-names-vector ["#202020" "#ac4142" "#90a959" "#f4bf75" "#6a9fb5" "#aa759f" "#6a9fb5" "#e0e0e0"])
- '(ansi-term-color-vector [unspecified "#202020" "#ac4142" "#90a959" "#f4bf75" "#6a9fb5" "#aa759f" "#6a9fb5" "#e0e0e0"])
+ '(ansi-color-names-vector ["#151515" "#ac4142" "#90a959" "#f4bf75" "#6a9fb5" "#aa759f" "#6a9fb5" "#b0b0b0"])
+ '(ansi-term-color-vector [unspecified "#151515" "#ac4142" "#90a959" "#f4bf75" "#6a9fb5" "#aa759f" "#6a9fb5" "#b0b0b0"])
  '(background-color "#002b36")
  '(background-mode dark)
  '(calendar-week-start-day 1)
@@ -62,7 +62,8 @@
  '(solarized-contrast (quote normal))
  '(tramp-default-method-alist (quote ((nil "%" "smb") ("\\`\\(127\\.0\\.0\\.1\\|::1\\|Tron\\.local\\|localhost6?\\)\\'" "\\`root\\'" "su") (nil "\\`\\(anonymous\\|ftp\\)\\'" "ftp") ("\\`ftp\\." nil "ftp"))))
  '(trash-directory "~/.Trash/")
- '(truncate-lines t))
+ '(truncate-lines t)
+ '(undo-tree-auto-save-history t))
 
 
 (custom-set-faces
@@ -71,7 +72,17 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(border ((t (:background "#303030"))))
+ '(linum ((t (:background "#1a1a1a" :foreground "#505050"))))
+ '(mode-line ((t (:background "#1a1a1a" :box nil))))
+ '(mode-line-buffer-id ((t (:foreground "#8a8a8a"))))
+ '(mode-line-emphasis ((t (:foreground "#b0b0b0" :slant italic))))
+ '(mode-line-highlight ((t (:foreground "#aa75" :box nil :weight bold))))
+ '(mode-line-inactive ((t (:inherit mode-line :background "#1a1a1a" :foreground "#3a3a3a" :box nil :weight normal))))
  '(org-hide ((t (:foreground "background"))))
+ '(powerline-active1 ((t (:inherit mode-line :background "#505050"))))
+ '(powerline-active2 ((t (:inherit mode-line :background "#1a1a1a"))))
+ '(powerline-inactive1 ((t (:inherit mode-line-inactive :foreground: "#303030" :background "#1a1a1a"))))
+ '(powerline-inactive2 ((t (:inherit mode-line-inactive :foreground: "#303030" :background "#1a1a1a"))))
  '(speedbar-button-face ((t (:foreground "#90a959" :height 180))))
  '(speedbar-directory-face ((t (:foreground "#6a9fb5" :height 200))))
  '(speedbar-file-face ((t (:foreground "#e0e0e0" :height 180))))

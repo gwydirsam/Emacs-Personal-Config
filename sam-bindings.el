@@ -5,6 +5,9 @@
 
 ;;; Code:
 
+;; map hyper to function
+(setq ns-function-modifier 'hyper)
+
 ;; Kill-buffer
 (global-set-key (kbd "s-k") 'kill-this-buffer)
 

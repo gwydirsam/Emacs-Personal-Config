@@ -33,6 +33,10 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+;;gitconfig-mode
+(add-to-list 'auto-mode-alist '("\\.gitmodules\\'" . gitconfig-mode))
+(add-to-list 'auto-mode-alist '("\\.gitignore\\'" . gitconfig-mode))
+
 
 ;;C-c C-c for mail-mode exit mail
 (add-hook 'mail-mode-hook

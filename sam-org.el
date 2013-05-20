@@ -36,8 +36,8 @@
                              "~/Notes/notes.org"
                              "~/Notes/school.org"))
 
-(run-with-idle-timer 60 t 'org-mobile-pull)
-(run-with-idle-timer 70 t 'org-mobile-push)
+;(run-with-idle-timer 60 t 'org-mobile-pull)
+;(run-with-idle-timer 70 t 'org-mobile-push)
 
 ;; No properties drawer
 (setq org-mobile-force-id-on-agenda-items nil)

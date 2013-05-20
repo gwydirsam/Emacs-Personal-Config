@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(ampc-default-server (quote ("totoro.local" . 6600)))
  '(ansi-color-names-vector ["#151515" "#ac4142" "#90a959" "#f4bf75" "#6a9fb5" "#aa759f" "#6a9fb5" "#b0b0b0"])
- '(ansi-term-color-vector [unspecified "#151515" "#ac4142" "#90a959" "#f4bf75" "#6a9fb5" "#aa759f" "#6a9fb5" "#b0b0b0"])
+ '(ansi-term-color-vector [unspecified "#151515" "#ac4142" "#90a959" "#f4bf75" "#6a9fb5" "#aa759f" "#6a9fb5" "#b0b0b0"] t)
  '(background-color "#002b36")
  '(background-mode dark)
  '(calendar-week-start-day 1)
@@ -43,6 +43,7 @@
  '(org-agenda-span (quote day))
  '(org-agenda-time-grid (quote ((daily today require-timed remove-match) #("----------------" 0 16 (org-heading t)) (500 600 700 800 900 1000 1100 1200 1300 1400 1500 1600 1700 1800 1900 2000 2100 2200))))
  '(org-agenda-time-leading-zero t)
+ '(org-bullets-bullet-list (quote ("◉" "○" "✸" "✚")))
  '(org-columns-default-format "%25ITEM %TODO %3PRIORITY %TAGS %17Effort(Estimated Effort){:} %CLOCKSUM")
  '(org-enforce-todo-checkbox-dependencies t)
  '(org-enforce-todo-dependencies t)
@@ -72,7 +73,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(border ((t (:background "#303030"))))
- '(linum ((t (:background "#1a1a1a" :foreground "#505050"))))
+ '(linum ((t (:background "#1a1a1a" :foreground "#505050"))) t)
  '(mode-line ((t (:background "#1a1a1a" :box nil))))
  '(mode-line-buffer-id ((t (:foreground "#8a8a8a"))))
  '(mode-line-emphasis ((t (:foreground "#b0b0b0" :slant italic))))

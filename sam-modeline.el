@@ -6,7 +6,7 @@
 ;;; Code:
 
 ;; powerline
-(powerline-sam-theme)
+(powerline-center-theme)
 
 (provide 'sam-modeline)
 

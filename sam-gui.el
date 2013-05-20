@@ -59,7 +59,7 @@
 (setq menu-bar-mode t)
 
 ;;Enable Tool-bar-mode
-(tool-bar-mode 1)
+(tool-bar-mode -1)
 ;;Fixes Lion Fullscreen
 ;;(setq tool-bar-lines 0)
 

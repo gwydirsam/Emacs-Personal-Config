@@ -21,11 +21,11 @@
 (set-keyboard-coding-system 'utf-8)
 (setq default-buffer-file-coding-system 'utf-8)
 
-(require 'unicode-fonts)
-(unicode-fonts-setup)
+;;(require 'unicode-fonts)
+;;(unicode-fonts-setup)
 
 ;; Set Font
-(set-face-attribute 'default nil :family "Consolas for Powerline" :height 220)
+(set-face-attribute 'default nil :family "Consolas for Powerline" :height 200)
 ;;(set-fontset-font "fontset-default" 'unicode "Consolas for Powerline")
 
 ;;; Gui Config
@@ -59,7 +59,7 @@
 (setq menu-bar-mode t)
 
 ;;Enable Tool-bar-mode
-(tool-bar-mode -1)
+;;(tool-bar-mode -1)
 ;;Fixes Lion Fullscreen
 ;;(setq tool-bar-lines 0)
 
@@ -82,17 +82,6 @@
           (lambda () (run-at-time 3 nil
                                   (lambda () (delete-windows-on "*Completions*"))
                                   (lambda () (delete-windows-on "*Ido Completions*")))))
-
-(defun toggle-full-screen ()
-  (interactive)
-  (ns-toggle-fullscreen)
-  (sit-for 2)
-  (tool-bar-mode +1)
-  (tool-bar-mode +1)
-  (tool-bar-mode -1)
-  (tool-bar-mode -1)
-  (set-frame-height (selected-frame) 46)
-)
 
 (provide 'sam-gui)
 

@@ -14,8 +14,8 @@
 (setq evil-normal-state-cursor '("#ac4142" box))
 (setq evil-emacs-state-cursor '("#6a9fb5" box))
 
-(evil-set-initial-state org-agenda-mode-map 'motion)
-(evil-set-initial-state dired-mode-map 'motion)
+;;(evil-set-initial-state org-agenda-mode-map 'motion)
+;;(evil-set-initial-state dired-mode-map 'motion)
 
 (provide 'sam-evil)
 

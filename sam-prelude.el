@@ -37,7 +37,7 @@
   (flyspell-prog-mode)
   (prelude-local-comment-auto-fill)
   (whitespace-turn-off)
-  (prelude-add-watchwords)
+  ;;(prelude-add-watchwords)
   (linum-mode)
   (visual-line-mode 0))
 (add-hook 'prelude-prog-mode-hook 'sam-prog-mode-defaults t)

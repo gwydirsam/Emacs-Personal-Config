@@ -7,6 +7,7 @@
 ;;; Org
 (require 'org)
 (require 'prelude-org)
+;(require 'org-fstree)
 
 ;; stripe tables
 (add-hook 'org-mode-hook 'org-table-stripes-enable)
@@ -33,8 +34,7 @@
 
 (setq org-agenda-files (list "~/Notes/inbox.org"
                              "~/Notes/schedule.org"
-                             "~/Notes/notes.org"
-                             "~/Notes/school.org"))
+                             "~/Notes/tasks.org"))
 
 ;(run-with-idle-timer 60 t 'org-mobile-pull)
 ;(run-with-idle-timer 70 t 'org-mobile-push)
@@ -63,7 +63,7 @@
 
 (setq org-agenda-custom-commands
       '(
-        ("t" "Today" agenda ""
+        ("g" "Today" agenda ""
          ((org-agenda-overriding-header "Today")
           (org-agenda-start-on-weekday nil)
           (org-agenda-span (quote day))

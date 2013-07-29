@@ -3,6 +3,11 @@
 ;;; Commentary:
 ;;
 
+;; Save Sessions
+;;(desktop-save-mode 1)
+;;(setq desktop-path '("~/.emacs.d/pesonal/desktop-saves/"))
+;;(setq desktop-dirname "~/.emacs.d/personal/desktop-saves/")
+
 ;; Use Smex for recent M-x commands a la ido.
 (smex-initialize)
 

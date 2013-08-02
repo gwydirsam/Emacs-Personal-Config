@@ -34,7 +34,7 @@
 ;; Set to the name of the file where new notes will be stored
 (setq org-mobile-inbox-for-pull "~/Notes/inbox.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
-(setq org-mobile-directory "~/Dropbox/MobileOrg")
+(setq org-mobile-directory "~/Mounts/MobileOrg")
 
 (setq org-agenda-files (list "~/Notes/inbox.org"
                              "~/Notes/schedule.org"
@@ -43,8 +43,7 @@
 (setq org-mobile-force-id-on-agenda-items nil)
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "NEXT(n)" "STARTED(s)" "|" "DONE(d!/!)")
-              (sequence "WAITING(w@/@)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE"))))
+      (quote ((sequence "todo(t)" "|" "failed(f)" "done(d)"))))
 
 ;;time tracking
 (setq org-clock-persist 'history)

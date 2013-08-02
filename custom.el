@@ -116,10 +116,8 @@
  '(org-publish-use-timestamps-flag nil)
  '(org-scheduled-past-days 2)
  '(org-src-fontify-natively t)
- '(org-todo-keywords
-   (quote
-    ((sequence "TODO(t)" "NEXT(n)" "STARTED(s)" "|" "DONE(d!/!)")
-     (sequence "WAITING(w@/@)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" "PHONE"))))
+'(org-todo-keywords
+      (quote ((sequence "todo(t)" "|" "failed(f)" "done(d)"))))
  '(prelude-flyspell t)
  '(prelude-global-mode t)
  '(prelude-guru nil)

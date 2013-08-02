@@ -5,11 +5,9 @@
 
 ;;; Code:
 
-;; map hyper to function
-(setq ns-function-modifier 'hyper)
-
-;;map super to command
 (setq mac-command-modifier 'super)
+(setq mac-option-modifier 'meta)
+(setq ns-function-modifier 'hyper)
 
 ;; Kill-buffer
 (global-set-key (kbd "s-k") 'kill-this-buffer)

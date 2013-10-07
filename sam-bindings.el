@@ -10,7 +10,7 @@
 (setq ns-function-modifier 'hyper)
 
 ;; Kill-buffer
-(global-set-key (kbd "s-k") 'kill-this-buffer)
+(global-set-key [remap prelude-kill-whole-line] 'kill-this-buffer)
 
 ;;;These were for Emacs-Mac-Port, but messes up normal emacs
 ;;;; Paste

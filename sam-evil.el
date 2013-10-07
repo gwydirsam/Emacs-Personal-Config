@@ -14,7 +14,7 @@
 (setq evil-normal-state-cursor '("#ac4142" box))
 (setq evil-emacs-state-cursor '("#6a9fb5" box))
 
-;; coflicts with evil
+;; conflicts with evil
 (key-chord-mode -1)
 
 ;;(evil-set-initial-state org-agenda-mode-map 'motion)

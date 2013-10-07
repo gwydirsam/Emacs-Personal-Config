@@ -7,9 +7,11 @@
 
 ;; map hyper to function
 (setq ns-function-modifier 'hyper)
+(setq mac-command-modifier 'super)
+(setq mac-option-modifier 'meta)
 
 ;; Kill-buffer
-(global-set-key (kbd "s-k") 'kill-this-buffer)
+(global-set-key [remap prelude-kill-whole-line] 'kill-this-buffer)
 
 ;;;These were for Emacs-Mac-Port, but messes up normal emacs
 ;;;; Paste

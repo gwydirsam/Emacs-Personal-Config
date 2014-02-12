@@ -13,13 +13,16 @@
 ;; Set theme
 (load-theme 'base16-custom t)
 
+;; Enable sRGB
+(setq ns-use-srgb-colorspace t)
+
 ;; Unicode
 ;; set up unicode
 (prefer-coding-system       'utf-8)
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
-(setq default-buffer-file-coding-system 'utf-8)
+(setq buffer-file-coding-system 'utf-8)
 
 ;;(require 'unicode-fonts)
 ;;(unicode-fonts-setup)

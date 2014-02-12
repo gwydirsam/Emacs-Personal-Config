@@ -52,7 +52,7 @@
  '(minimap-recenter-type (quote relative))
  '(mpc-host "totoro.local")
  '(ns-pop-up-frames nil)
- '(ns-use-native-fullscreen nil)
+ '(ns-use-native-fullscreen t)
  '(org-M-RET-may-split-line nil)
  '(org-agenda-current-time-string #("now - - - - - - - - - - - - -" 0 29 (org-heading t)))
  '(org-agenda-files (quote ("~/Notes/inbox.org" "~/Notes/schedule.org")))
@@ -171,6 +171,8 @@
      (340 . "#2790C3")
      (360 . "#268bd2"))))
  '(vc-annotate-very-old-color nil)
+ '(verilog-compiler "/usr/local/bin/verilator -cc")
+ '(verilog-linter "/usr/local/bin/verilator --lint-only")
  '(weechat-color-list
    (quote
     (unspecified "#002b36" "#073642" "#990A1B" "#dc322f" "#546E00" "#859900" "#7B6000" "#b58900" "#00629D" "#268bd2" "#93115C" "#d33682" "#00736F" "#2aa198" "#839496" "#657b83")))

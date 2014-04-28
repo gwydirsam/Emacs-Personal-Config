@@ -50,7 +50,7 @@
 (scroll-bar-mode -1)
 
 ;;Disable fringe-mode
-(set-fringe-mode 0)
+(set-fringe-mode 1)
 
 ;;visual line mode
 (visual-line-mode 1)

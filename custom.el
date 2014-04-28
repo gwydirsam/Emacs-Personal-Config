@@ -28,7 +28,6 @@
  '(evil-esc-delay 0.0)
  '(fci-rule-color "#383838")
  '(flycheck-idle-change-delay 2)
- '(fringe-mode 0 nil (fringe))
  '(highlight-changes-colors (quote ("#d33682" "#6c71c4")))
  '(highlight-tail-colors
    (quote

@@ -28,7 +28,7 @@
 ;;(unicode-fonts-setup)
 
 ;; Set Font
-(set-face-attribute 'default nil :family "Consolas for Powerline" :height 200)
+(set-face-attribute 'default nil :family "Consolas for Powerline" :height 220)
 ;;(set-fontset-font "fontset-default" 'unicode "Consolas for Powerline")
 
 ;;; Gui Config

@@ -16,7 +16,7 @@
 (setq org-agenda-window-setup 'current-window)
 
 ;;capture
-(setq org-default-notes-file "~/Notes/inbox.org")
+(setq org-default-notes-file "~/Notes/Inbox/inbox.org")
 (define-key global-map "\C-cc" 'org-capture)
 
 ;;show place in file that I am in agenda...like that makes sense
@@ -28,13 +28,20 @@
 ;; Set to the location of your Org files on your local system
 (setq org-directory "~/Notes/")
 ;; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/Notes/inbox.org")
+(setq org-mobile-inbox-for-pull "~/Notes/Inbox/inbox.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
-(setq org-mobile-directory "~/Mounts/MobileOrg")
+(setq org-mobile-directory "~/Notes/MobileOrg")
 
-(setq org-agenda-files (list "~/Notes/inbox.org"
+(setq org-agenda-files (list "~/Notes/Inbox/inbox.org"
                              "~/Notes/schedule.org"
-                             "~/Notes/tasks.org"))
+                             "~/Notes/tasks.org"
+                             "~/Notes/log.org"
+                             "~/Notes/School/Current-Semester/Notes/info.org"
+                             "~/Notes/School/Current-Semester/Notes/HIST106/Class Information.org"
+;;                           "~/Notes/School/Current-Semester/Notes/ECEN248/Class Information.org"
+;;                           "~/Notes/School/Current-Semester/Notes/CSCE314/Class Information.org"
+;;                           "~/Notes/School/Current-Semester/Notes/MATH470/Class Information.org"
+))
 
 ;(run-with-idle-timer 60 t 'org-mobile-pull)
 ;(run-with-idle-timer 70 t 'org-mobile-push)
@@ -43,7 +50,7 @@
 (setq org-mobile-force-id-on-agenda-items nil)
 
 (setq org-todo-keywords
-      (quote ((sequence "TODO(t)" "|" "FAILED(f)" "DONE(d)"))))
+      (quote ((sequence "TODO(t)" "|" "Cancelled(c)" "DONE(d)"))))
 
 ;;time tracking
 (setq org-clock-persist 'history)
@@ -58,7 +65,9 @@
 (require 'epa-file)
 (org-crypt-use-before-save-magic)
 (setq org-tags-exclude-from-inheritance (quote ("crypt")))
-(setq org-crypt-key "0AD14C01")
+(setq org-mobile-use-encryption t)
+;; Hide this somehow
+(setq org-mobile-encryption-password "ETgDHVRM")
 
 (setq org-agenda-custom-commands
       '(
@@ -69,7 +78,7 @@
           (org-agenda-show-all-dates nil)
           (org-deadline-warning-days 31)
           (org-agenda-repeating-timestamp-show-all t) ;; ensures that repeating events appear on all relevant dates
-            ))
+          (org-agenda-prefix-format "%12|T %?-12 t %-s")))
         ("w" "Week" agenda ""
          ((org-agenda-overriding-header "Week")
           (org-agenda-start-on-weekday nil)

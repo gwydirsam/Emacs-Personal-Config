@@ -34,7 +34,7 @@
 ;; Set to the name of the file where new notes will be stored
 (setq org-mobile-inbox-for-pull "~/Notes/inbox.org")
 ;; Set to <your Dropbox root directory>/MobileOrg.
-(setq org-mobile-directory "~/Mounts/MobileOrg")
+(setq org-mobile-directory "~/MobileOrg/Dropbox/MobileOrg")
 
 (setq org-agenda-files (list "~/Notes/inbox.org"
                              "~/Notes/schedule.org"
